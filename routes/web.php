@@ -23,3 +23,5 @@ Route::redirect('/', '/home', 301);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/saldo', [App\Http\Controllers\ContaController::class, 'saldo'])->name('saldo');
+Route::post('/saldo', [App\Http\Controllers\ContaController::class, 'getSaldo']);
