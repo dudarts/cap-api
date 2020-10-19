@@ -9,20 +9,16 @@
 
                     <div class="card-body">
                         <div class="container">
-                            <?php
-                            if (isset($erro)) {
-                                if ($erro){
-                            ?>
-                                <h3>Não foi possível acessar o saldo, tenta novamente</h3>
-                                <?php
-                                } else {
-                                    echo "<h1>Saldo atual: <b>R$ " . $saldo . "</b></h1>";
-                                }
-                                echo '<a href="/home" class="btn btn-secondary">Voltar</a>';
-                            } else {
-                            ?>
+                            @if (isset($erro))
+                                @if ($erro)
+                                    <h3>Não foi possível acessar o saldo, tenta novamente</h3>
+                                @else
+                                    <h1>Saldo atual: <b>R$ {{ $saldo }}</b></h1>
+                                @endif
+                                <a href="/home" class="btn btn-secondary">Voltar</a>
+                            @else
                                 <form-saldo></form-saldo>
-                            <?php } ?>
+                            @endif
                         </div>
                     </div>
                 </div>

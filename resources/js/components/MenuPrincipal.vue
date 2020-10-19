@@ -1,13 +1,13 @@
 <template>
     <div class="row">
         <div class="col-sm">
-            <a href="/saldo" button type="button" class="btn btn-secondary btn-lg btn-block">Saldo</a>
+            <a href="/saldo" type="button" class="btn btn-secondary btn-lg btn-block">Saldo</a>
         </div>
         <div class="col-sm">
-            <button type="button" class="btn btn-secondary btn-lg btn-block">Depósito</button>
+            <a href="/deposito" type="button" class="btn btn-secondary btn-lg btn-block">Depósito</a>
         </div>
         <div class="col-sm">
-            <button type="button" class="btn btn-secondary btn-lg btn-block">Saque</button>
+            <a href="/saque" type="button" class="btn btn-secondary btn-lg btn-block">Saque</a>
         </div>
     </div>
 </template>
